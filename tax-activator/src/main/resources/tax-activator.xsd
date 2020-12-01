@@ -1,0 +1,21 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://partner.com/npwp/activator"
+	targetNamespace="http://partner.com/npwp/activator"
+	elementFormDefault="qualified">
+
+	<xs:element name="activateNpwpRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="npwp" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="activateNpwpResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="success" type="xs:boolean" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
