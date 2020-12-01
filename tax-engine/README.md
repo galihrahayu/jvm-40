@@ -5,6 +5,7 @@ Simulate how Tax engine work.
 This app will convert SOAP to REST.
 
 OpenAPI UI available at : http://localhost:8082/swagger-ui
+Actuator Health check at: http://localhost:8082/actuator/health
 
 ## Reference
 
