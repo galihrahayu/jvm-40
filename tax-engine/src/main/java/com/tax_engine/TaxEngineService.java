@@ -4,6 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
 import org.springframework.ws.soap.client.SoapFaultClientException;
+
+import com.tax_engine.tax_activator.wsdl.ActivateNpwpResponse;
+
 import org.springframework.retry.annotation.Backoff;
 
 @Service
@@ -13,8 +16,8 @@ public class TaxEngineService {
 
 	@Retryable(value = {
 			SoapFaultClientException.class }, maxAttempts = 2, backoff = @Backoff(delay = 100, maxDelay = 500))
-	public boolean activate(String npwpToActivate) {
+	public ActivateNpwpResponse activate(String npwpToActivate) {
 		Npwp npwp = new Npwp(npwpToActivate);
-		return npwpActivatorClient.activate(npwp.format()).isSuccess();
+		return npwpActivatorClient.activate(npwp.format());
 	}
 }

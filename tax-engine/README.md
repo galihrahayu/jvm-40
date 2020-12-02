@@ -6,7 +6,7 @@ This app will convert SOAP to REST.
 
 OpenAPI Spec available at: http://localhost:8082/v3/api-docs
 
-OpenAPI UI available at : http://localhost:8082/swagger-ui/index.html
+OpenAPI UI available at : http://localhost:8082/swagger-ui.html
 
 Actuator Health check at: http://localhost:8082/actuator/health
 
